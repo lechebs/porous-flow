@@ -1,4 +1,4 @@
-## Notes
+## Notes (outdated)
 
 *TLDR*: Let the compiler auto-vectorize `comp_grad()` for a more portable code, or use `comp_grad_vectorized()` to squeeze even more theoretical performance, always maintaining a **row-major layout**. Both reduce TLB misses, and are cache friendly enough to beat tiled variants, I suspect because of the fact that the stencil has unit radius. Looping with 2D tiles is able to reach the same performance for big enough domains.
 
